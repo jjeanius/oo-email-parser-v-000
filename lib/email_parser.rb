@@ -5,7 +5,7 @@ require 'pry'
 # or whitespace (' ').
 
 class EmailParser
-attr_accessor :name, :csv_emails
+attr_accessor :name, :@company, :com, :csv_emails
 
 # def initialize(csv_emails)
 #  @name = name
@@ -15,6 +15,6 @@ attr_accessor :name, :csv_emails
   def self.parse(csv_emails)
     new_emails = csv_emails.new
     self.collect |email| email.name == csv_emails
-    csv_emails.split(" , ")[1].split(" @ .com")
+    csv_emails.split(" , ")[1].split(" @compnay.com")
     end
   end
