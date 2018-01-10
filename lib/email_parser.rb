@@ -15,7 +15,7 @@ attr_accessor :name, :emails
 
   def self.parse(address)
     @@all.collect |email| email.name == address
-    @@all = address.split(" , ")[1],split(" @ .com")
-    address
+    address.split(" , ")[1],split(" @ .com")
     end
+    address
   end
