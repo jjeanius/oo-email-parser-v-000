@@ -19,5 +19,3 @@ attr_accessor :name, :emails
     address
     end
   end
-end
-end
