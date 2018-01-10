@@ -14,6 +14,7 @@ attr_accessor :name, :emails
 #  end
 
   def self.parse(address)
+    binding.pry
     @@all.collect |email| email.name == address
     address.split(" , ")[1],split(" @ .com")
     end
