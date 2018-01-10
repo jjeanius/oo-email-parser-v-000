@@ -15,7 +15,7 @@ def initialize(csv_emails)
 
   def parse(csv_emails)
     new_emails = csv_emails.new
-    self.collect |email| email.name == csv_emails
+    csv_emails.collect |email| email.name == csv_emails
     csv_emails.split(" , ")[1].split(" @ .com")
     end
   end
