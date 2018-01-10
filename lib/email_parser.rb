@@ -5,17 +5,15 @@ require 'pry'
 # or whitespace (' ').
 
 class EmailParser
-attr_accessor :name, :emails
-@@emails = []
+attr_accessor :name, :csv_emails
 
 # def initialize(csv_emails)
 #  @name = name
 #  @@emails = csv_emails
 #  end
 
-  def self.parse(emails)
-    binding.pry
-    @@emails.collect |email| email.name == address
-    address.split(" , ")[1].split(" @ .com")
+  def self.parse(csv_emails)
+    self.collect |email| email.name == csv_emails
+    csv_emails.split(" , ")[1].split(" @ .com")
     end
   end
