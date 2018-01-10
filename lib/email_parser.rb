@@ -18,5 +18,4 @@ attr_accessor :name, :emails
     @@emails.collect |email| email.name == address
     address.split(" , ")[1].split(" @ .com")
     end
-    address
   end
