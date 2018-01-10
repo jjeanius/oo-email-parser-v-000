@@ -13,11 +13,11 @@ attr_accessor :name, :emails
 #  @@emails = csv_emails
 #  end
 
-def self.parse(address)
-  @@all.collect |email| email.name == address
-  @@all = address.split(" , ")[1],split(" @ .com")
-  address
-
- end
- end
+  def self.parse(address)
+    @@all.collect |email| email.name == address
+    @@all = address.split(" , ")[1],split(" @ .com")
+    address
+    end
+  end
+end
 end
