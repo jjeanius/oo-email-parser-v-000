@@ -13,9 +13,8 @@ attr_accessor :name, :csv_emails
 #  end
 
   def self.parse(csv_emails)
-
+    new_emails = csv_emails.new
     self.collect |email| email.name == csv_emails
     csv_emails.split(" , ")[1].split(" @ .com")
     end
-    self.parse
   end
